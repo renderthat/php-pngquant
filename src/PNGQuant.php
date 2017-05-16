@@ -6,7 +6,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace ourcodeworld\PNGQuant;
+namespace renderthat\PNGQuant;
 
 class PNGQuant
 {
@@ -68,6 +68,7 @@ class PNGQuant
     }
 
     function buildCommand(){
+
         $_command = $this->_binaryPath. " ". ($this->_colors ? "$this->_colors ":""). $this->_imagePath;
 
         foreach($this->_options as $option){
@@ -107,8 +108,9 @@ class PNGQuant
         return $this->_errorTable;
     }
     
-    function setColors($colors){
-
+    function setColors($colors){ 
+        $this->_colors = $colors;
+        return $this;
     }
 
     function setImage($imagePath){
