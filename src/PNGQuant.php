@@ -13,6 +13,7 @@ class PNGQuant
     private $_binaryPath = "pngquant";
 
     private $_imagePath = "";
+    private $_colors = "";
 
     private $_options = array();
 
@@ -67,7 +68,7 @@ class PNGQuant
     }
 
     function buildCommand(){
-        $_command = $this->_binaryPath. " ". $this->_imagePath;
+        $_command = $this->_binaryPath. " ". ($this->_colors ? "$this->_colors ":""). $this->_imagePath;
 
         foreach($this->_options as $option){
             $key = $option['key'];
@@ -104,6 +105,10 @@ class PNGQuant
 
     function getErrorTable(){
         return $this->_errorTable;
+    }
+    
+    function setColors($colors){
+
     }
 
     function setImage($imagePath){
