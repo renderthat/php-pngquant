@@ -1,5 +1,5 @@
 {
-    "name": "ourcodeworld/php-pngquant",
+    "name": "renderthat/php-pngquant",
     "description": "A non-official PHP Wrapper class for pngquant, the command-line utility and a library for lossy compression of PNG images.",
     "type": "library",
     "require": {
@@ -8,14 +8,14 @@
     "license": "mit",
     "authors": [
         {
-            "name": "Carlos Delgado",
-            "email": "dev@ourcodeworld.com",
-            "homepage": "http://ourcodeworld.com"
+            "name": "Johannes Gilges",
+            "email": "johannes.gilges@renderthat.com",
+            "homepage": "http://www.renderthat.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "ourcodeworld\\PNGQuant\\": "src/"
+            "renderthat\\PNGQuant\\": "src/"
         }
     },
     "keywords": [
